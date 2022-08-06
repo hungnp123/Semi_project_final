@@ -29,6 +29,8 @@
     }
 </style>
 <body>
+<div class="img-src" style="background-image: url('img/banner1.jpg')"></div>
+					<div class="img-src blur" style="background-image: url(&quot;img/banner1.jpg&quot;); opacity: 0;"></div>
     <nav class="navbar navbar-expand-lg bg-white">
         <a class="navbar-brand" href="homepage.php"><img style="margin: 15px;" src="img/weblogo.jpg" width="200px" height="55px"></a>
     </nav>
@@ -54,6 +56,6 @@
 									</form>
 								</div>	
 							</ul>
-					</div>
+					</div>			
 </body>    
 </html>

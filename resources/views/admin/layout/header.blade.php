@@ -30,7 +30,7 @@
 </style>
 <body>
     <nav class="navbar navbar-expand-lg bg-white">
-        <a class="navbar-brand" href="homepage.php"><img style="margin: 15px;" src="img/logo.jpg" width="180px" height="50px"></a>
+        <a class="navbar-brand" href="homepage.php"><img style="margin: 15px;" src="img/weblogo.jpg" width="200px" height="55px"></a>
     </nav>
 </body>    
 </html>

@@ -35,3 +35,10 @@ Route::get('/category/edit',[CategoryController::class, 'edit']) -> name('catego
 Route::get('/category/update',[CategoryController::class, 'update']) -> name('category.update');
 Route::get('/category/delete',[CategoryController::class, 'destroy']) -> name('category.destroy');
 Route::get('/category/store',[CategoryController::class, 'store']) -> name('category.store');
+
+Route::get('/product/index',[ProductController::class, 'index']) -> name('product.index');
+Route::get('/product/create',[ProductController::class, 'create']) -> name('product.create');
+Route::get('/product/edit',[ProductController::class, 'edit']) -> name('product.edit');
+Route::get('/product/update',[ProductController::class, 'update']) -> name('product.update');
+Route::get('/product/delete',[ProductController::class, 'delete']) -> name('product.delete');
+Route::get('/product/store',[ProductController::class, 'store']) -> name('product.store');

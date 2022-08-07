@@ -17,6 +17,9 @@ use App\Http\Controllers\CategoryController;
 Route::get('/header', function () {
     return view('admin/layout/header');
 });
+Route::get('/menu', function () {
+    return view('admin/layout/menubar');
+});
 Route::get('/banner', function () {
     return view('admin/layout/banner');
 });

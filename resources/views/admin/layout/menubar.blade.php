@@ -22,6 +22,11 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
     }
+	.carousel-inner .item img {
+        margin: auto;
+        width:100%;
+        height:500px;
+    }
 </style>
 <body>
     <div class="header">
@@ -34,7 +39,6 @@
 							<span class="icon-bar"></span>                        
 						</button>
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<a href="homepage.php"><img src="img/weblogo.jpg" width="200px" height="55px"></a>
 				<li><a href="homepage.php"><span class=" glyphicon glyphicon-home"> Home</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> Category<span class="caret"></span></a>
@@ -48,15 +52,6 @@
 					<li><a href="introduction.php"><span class=" glyphicon glyphicon-bookmark"> News</a></li>
 			</ul>
 		</div>			
-				<ul class="nav navbar-nav navbar-right">
-					<div style="margin-top: 27px;" id="form_search">
-						<form class="form-inline ml-auto" data-background-color action="search.php">
-							<input type="text" class="form-control" name="user_query" placeholder="Search a music" />
-							<input type="submit" class="btn btn-success btn-round" name="Search" value="search" />
-						</form>
-					</div>	
-				</ul>
-	
 		</div>
     </nav>
 	</div>    

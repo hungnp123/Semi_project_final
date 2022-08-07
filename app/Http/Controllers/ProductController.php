@@ -26,8 +26,8 @@ class ProductController extends Controller
         $product->name = $validateData['product_name'];
         $product->price = $validateData['product_price'];
         $category->description = $validateData['description'];
-        if($request->hasFile('image')){
-            $file =$request->file('image');
+        if($request->hasFile('product_img')){
+            $file =$request->file('product_img');
             $ext=$file->getClientOriginalExtension();
             $filename=time().'.'.$ext;
 

@@ -41,15 +41,14 @@
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li><a href="homepage.php"><span class=" glyphicon glyphicon-home"> Home</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> Category<span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bookmark"> Category<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="login">Login</a></li>
 								<li><a href="signup">Sign Up</a></li>
 								<li><a href="cart.php">Team management</a></li>
 							</ul>
 					</li>
-					<li><a href="managesong.php"><span class=" glyphicon glyphicon-music"> Match</a></li>
-					<li><a href="introduction.php"><span class=" glyphicon glyphicon-bookmark"> News</a></li>
+					<li><a href="managesong.php"><span class=" glyphicon glyphicon-book"> Books</a></li>
 			</ul>
 		</div>			
 		</div>

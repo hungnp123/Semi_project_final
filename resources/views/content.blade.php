@@ -8,13 +8,22 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style type="text/css">
-    .carousel-inner .item img {
-        margin: auto;
-        width:100%;
-        height:500px;
+    .healing {
+        font-family: Courier;
+        text-align: center;
+    }
+    .product p{
+        font-family: Courier;
+        text-align: center;
+        font-size: 16px;
     }
 </style>
 <body>
-
-</body>    
+    <div class="product">
+        <h1 class= "healing"> New Books</h1>
+        <hr width="60%">
+        <p class="text-muted">We have all book you want, check it out.</p>
+        $product
+    </div>
+</body>
 </html>

@@ -29,6 +29,9 @@ Route::get('/footer', function () {
 Route::get('/homepage', function (){
     return view('/homepage');
 });
+Route::get('/content', function (){
+    return view('/content');
+});
 
 /*controller space:*/
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');

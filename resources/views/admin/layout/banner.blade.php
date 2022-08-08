@@ -9,10 +9,12 @@
 </head>
 <style type="text/css">
     .carousel-inner .item img {
-        margin: auto;
         width:100%;
-        height:500px;
+        height:100%;
     }
+	.banner {
+		margin-top: 80px;
+	}
 </style>
 <body>
     <div class="banner">

@@ -23,7 +23,7 @@
         <h1 class= "healing"> New Books</h1>
         <hr width="60%">
         <p class="text-muted">We have all book you want, check it out.</p>
-        $product
+        
     </div>
 </body>
 </html>

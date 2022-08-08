@@ -12,7 +12,8 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('admin.product.index');
+        $data = Product:: all();
+        return view('index',['product' => $data]);
     }
 
     public function create()

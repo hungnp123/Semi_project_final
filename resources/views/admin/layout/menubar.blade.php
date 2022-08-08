@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,8 +28,8 @@
         height:500px;
     }
 </style>
-<body>
-    <div class="header">
+<body> -->
+    <div class="menu">
     <nav class="navbar navbar-expand-lg bg-success" role="navigation">
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<div class="navbar-header">
@@ -38,7 +38,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>                        
 						</button>
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<ul class="navbar-nav">
 				<li><a href="homepage.php"><span class=" glyphicon glyphicon-home"> Home</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bookmark"> Category<span class="caret"></span></a>

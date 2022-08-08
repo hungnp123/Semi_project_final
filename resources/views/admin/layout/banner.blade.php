@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
 	.banner {
 		margin-top: 80px;
 	}
-</style>
+</style> -->
 <body>
     <div class="banner">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -26,7 +26,7 @@
    		    </ol>
         <div class="carousel-inner" role="listbox">
       		<div class="item active">
-        		<img  src="img/banner1.jpg"  alt="banner 1">    
+        		<img src="img/banner1.jpg"  alt="banner 1">    
       		</div>
      		<div class="item">
                 <img src="img/banner2.jpg"  alt="banner 2">
@@ -44,5 +44,5 @@
     			<span class="sr-only">Next</span>
     		</a>
     </div>
-</body>    
-</html>
+<!-- </body>    
+</html> -->

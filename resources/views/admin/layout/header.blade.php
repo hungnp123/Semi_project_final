@@ -8,31 +8,50 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style type="text/css">
-    .dropdown{
-        width: 25%;
+    .header{
+        margin-top: 30px;
+    }
+    .profile{
+        width: 30%;
         height: auto;
-        margin-top: 27px;
         float: left;
-        margin-left:50px;
+        margin-top:10px;
     }
     .center {
-        width: 40%;
+        width: 30%;
         height: auto;
         float: left;
-        text-align: center;
-        margin-top: 27px;
+        margin-left:120px;
     }
-    .right {
-        width: 20%;
+    .search {
+        width: 30%;
         height:auto;
         float: right;
-        margin-top: 40px;
+        text-align: right;
+        margin-top: 15px;
     }
-
+	.banner {
+		padding-top: 50px;
+	}
+    .menu{
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .menu ul li{
+    	list-style: none;
+		margin: 12px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+	.carousel-inner .item img {
+        margin: auto;
+        width:100%;
+        height:500px;
+    }
 </style>
 <body>
 <div class="head">
-    <div class="dropdown" style="margin-left: 30px; font-size: 24px";>
+    <div class="profile" style="margin-left: 30px; font-size: 24px">
+    <div class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown"><img src="img/usericon.jpg" width="50px" height="50px"></a">
 			<ul class="dropdown-menu">
 				<li><a href="login">Login</a></li>
@@ -40,16 +59,16 @@
 				<li><a href="logout">Logout</a></li>
 			</ul>
     </div>    
+    </div>
     <div class="center">                                                                                      
         <a href="homepage.php"><img src="img/weblogo.jpg" width="250px" height="68px"></a>
     </div>
-    <div class="right"  id="form_search">
+    <div class="search"  id="form_search" width>
 		<form class="form-inline ml-auto" data-background-color action="search.php">
 			<input type="text" class="form-control" name="user_query" placeholder="Search a book" />
 			<input type="submit" class="btn btn-success btn-round" name="Search" value="search" />
 		</form>
-	</div>
-    </div>  
+	</div> 
 </div>    
-</body>
-</html>
+<!-- </body>
+</html> -->

@@ -1,1 +1,1 @@
-day là trang index category thôi
+<h1> day là trang index category thôi <h1>

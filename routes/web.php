@@ -32,7 +32,12 @@ Route::get('/homepage', function (){
 Route::get('/content', function (){
     return view('/content');
 });
-
+Route::get('/login', function (){
+    return view('/login');
+});
+Route::get('/signup', function (){
+    return view('/signup');
+});
 /*controller space:*/
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');

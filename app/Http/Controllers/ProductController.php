@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use app\Models\Product;
+use App\Models\Product;
 
 use Illuminate\Support\Facades\Validator;
 

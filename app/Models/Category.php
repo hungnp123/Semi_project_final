@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $connection ='category';
+    // protected $connection ='semi_project';
 
     protected $table = 'category';
 

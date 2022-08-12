@@ -12,9 +12,9 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        // $data = Category::all();
-        // return view('admin.category.index');
-        return Category::all();
+        $data = Category::all();
+        return view('admin.category.index', ['category' =>$data]);
+        // return Category::all();
     } 
 
     public function create()

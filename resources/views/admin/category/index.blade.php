@@ -1,44 +1,32 @@
+<style>
+    table {
+        width: 60%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid;
+    }
+    tr, td {
+        padding: 15px;
+        text-align: left;
+    }
+    tr:hover {background-color: #66CDAA;}
+</style>
+<body>
+<table>
+    <tr class="thead" style="background-color: #008080; color: white;">
+        <td>No</td>
+        <td>Category Name</td>
+        <td>Description </td>
+    </tr>
 
-<table class="table table-bordered">
-
-<tr>
-
-<th>No</th>
-
-<th>Name</th>
-
-<th>Details</th>
-
-<th width="280px">Action</th>
-
-</tr>
-
-@foreach($category as $cate_id => $category)
-
-<tr>
-
-<td>{{$cate_id+1}}</td>
-
-<td>{{ $category->name }}</td>
-
-<td>{{ $category->description }}</td>
-
-<td>
-
-<form action="{{ route('category.destroy',$category->id) }}" method="POST">
-
-<a class="btn btn-info" href="{{ route('category.show',$category->id) }}">Show</a>
-
-<a class="btn btn-primary" href="{{ route('category.edit',$category->id) }}">Edit</a>
-
-<a class="btn btn-primary" href="{{ route('category.destroy',$category->id) }}">Delete</a>
-
-</form>
-
-</td>
-
-</tr>
-
-@endforeach
+    @foreach ($category as $category)
+    <tr>
+        <td>{{$category['cate_id']}}</td>
+        <td>{{$category['cate_name']}}</td>
+        <td>{{$category['cate_des']}}</td>
+    </tr>
+    @endforeach
 
 </table>
+</body>

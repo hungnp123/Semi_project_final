@@ -12,7 +12,7 @@
     }
     tr:hover {background-color: #66CDAA;}
 </style>
-<body>
+
 <table>
     <tr class="thead" style="background-color: #008080; color: white;">
         <td>No</td>

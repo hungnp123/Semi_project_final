@@ -108,9 +108,9 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_img`, `product_pri
 (9, 'When Breath Becomes Air', 'book9.jpg', '16$', '2016', 'When Breath Becomes Air is the autobiography of Dr. Paul Kalanithi about his life and battle against lung cancer. The book was released by Random House on January 12, 2016, 1 year after Paul\'s death.', 6, 4),
 (10, 'The Silence of the Lambs', 'book10.jpg', '15$', '1988', 'The Silence of the Lambs is a detective thriller novel written by author Thomas Harris. First published in 1988.', 7, 5),
 (11, 'Hannibal', 'book11.jpg', '18$', '1999', 'Seven years have passed since Dr. Hannibal Lecter escaped from custody, seven years since FBI Agent Clarice Starling interviewed him in a maximum security hospital for lunatics.', 7, 5),
-(12, 'Little Women', 'book12,jpg', '18$', '1868', 'Little Women is a novel by American author Louisa May Alcott that was originally published in two volumes in 1868 and 1869. Alcott wrote the book over several months at the request of the publisher.', 8, 2),
+(12, 'Little Women', 'book12.jpg', '18$', '1868', 'Little Women is a novel by American author Louisa May Alcott that was originally published in two volumes in 1868 and 1869. Alcott wrote the book over several months at the request of the publisher.', 8, 2),
 (13, 'Call Me By Your Name', 'book13.jpg', '19$', '2007', 'Call Me By Your Name is a 2007 novel by American writer André Aciman. The book tells the romance between a 17-year-old Jewish teenager of Italian descent, Elio Perlman, and 24-year-old American Jewish scholar Oliver.', 9, 3),
-(14, 'Le Petit Prince', 'book14', '14$', '1943', 'The Little Prince, published in 1943, is the most famous novel by French writer and aviator Antoine de Saint-Exupéry. He rented The Bevin House in Asharoken, Long Island, New York while writing this piece. The novel also includes many paintings painted by Saint-Exupéry himself', 10, 2);
+(14, 'Le Petit Prince', 'book14.jpg', '14$', '1943', 'The Little Prince, published in 1943, is the most famous novel by French writer and aviator Antoine de Saint-Exupéry. He rented The Bevin House in Asharoken, Long Island, New York while writing this piece. The novel also includes many paintings painted by Saint-Exupéry himself', 10, 2);
 
 -- --------------------------------------------------------
 

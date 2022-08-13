@@ -26,29 +26,25 @@ class CategoryController extends Controller
     {
         if ($request->isMethod('POST')) {
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'description' => 'required' 
+            'cate_id' => 'required',
+            'cate_name' => 'required',         
+            'cate_des' => 'required'        
             ]);
-            if ($validator->fails()) {  
-                return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
+            $incrementing = true;
+            if ($validator->fails()) {      
+            return redirect()->back()     
+            ->withErrors($validator)    
+            ->withInput();   
             }
-            $newCategory = new Category();
-            $newCategory->name = $request->name;
-            $newCategory->description = $request->description;
+            $newCategory = new Category(); 
+            $newCategory->cate_id = $request->cate_id;  
+            $newCategory->cate_name = $request->cate_name; 
+            $newCategory->cate_des = $request->cate_des;  
             $newCategory->save();
             return redirect()->route('category.index')
-                ->with('success', 'Category created successfully.');
+            ->with('success', 'Category created successfully.');
         }
     }
-
-    // public function show($cate_id)
-    // { 
-    //     $category = Category::find($cate_id);
-    //     return view('category.show', ['category' => $category]);
-    // }
-
     public function update(Request $request, $id)
     { 
         if ($request->isMethod('POST')) {
@@ -56,6 +52,7 @@ class CategoryController extends Controller
                 'name' => 'required',
                 'description' => 'required',
             ]);
+            $cate_id=null;
         if ($validator->fails()) {
             return redirect()->back()
                 ->withErrors($validator)

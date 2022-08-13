@@ -17,6 +17,7 @@ class Category extends Model
         return $this->hasMany('App\Models\Product');
     }
     protected $fillable = [
-        'cate_name', 'cate_des'
+        'cate_name', 'cate_des', 'cate_id'
     ];
+    public $timestamps = false;
 }

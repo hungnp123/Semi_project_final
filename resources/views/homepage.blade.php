@@ -20,7 +20,17 @@
                 <div class="product-box">
                     <h4>{{$product ['product_name']}}</h4>
                     <hr width="200px"> 
-                    <p><img src="{{ asset('img/' . $product->product_img) }}" /><p>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <p><img src="{{ asset('img/' . $product->product_img) }}" /><p>
+                            </div>
+                            <div class="flip-box-back">
+                                <br>
+                                <strong>Description: </strong>{{$product ['description']}} 
+                            </div>
+                        </div>
+                    </div>         
                     <strong>Price: {{$product ['product_price']}}</strong>
                     <a class="btn btn-success btn-round" href='detail.php'>Details</a>  
                 </div>

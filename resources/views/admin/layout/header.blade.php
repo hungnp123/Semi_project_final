@@ -75,7 +75,7 @@
     	border-radius: 3%;
     	margin-left: 30px;
     	margin-right: 30px;
-    	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
  		background: #5F9EA0;
     }
     .single-product{
@@ -89,6 +89,33 @@
         width: 250px;
         height: 370px;
     }
+    .flip-box {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+    }
+    .flip-box-inner {
+        position: relative;
+        width: 250px;
+        height: 370px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 250px;
+        height: 370px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flip-box-back {
+        font-size:14px;
+        transform: rotateY(180deg);
+    }    
     .footer{
         width: 100%;
         margin-top: 75%;

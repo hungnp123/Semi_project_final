@@ -47,6 +47,44 @@
         width:100%;
         height:500px;
     }
+    .product{
+        width:100% ;
+    }
+    .healing {
+        font-family: Courier;
+        text-align: center;
+    }
+    .product p{
+        font-family: Courier;
+        text-align: center;
+        font-size: 16px;
+    }
+    .product-box {
+        margin-bottom: 30px;
+        margin-top:30px;
+    	height: auto;
+    	width: 310px;
+        padding-top: 10px;
+        padding-bottom:10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    	border-radius: 4%;
+    	margin-left: 30px;
+    	margin-right: 30px;
+    	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ 		background: #5F9EA0;
+    }
+    .single-product{
+        float:left;
+		text-align: center;
+		width: auto;
+		height: auto;
+		margin: auto;
+	}
+    .product-box img {
+        width: 250px;
+        height: 370px;
+    }
 </style>
 <body>
 <div class="head">

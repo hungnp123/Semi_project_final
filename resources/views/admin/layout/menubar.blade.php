@@ -1,34 +1,3 @@
-<!-- <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<style type="text/css">
-	.header{
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-    .header ul li{
-    	list-style: none;
-		padding: 20px;
-		margin-top: 12px;
-		margin-bottom: 12px;
-    }
-    .header img{
-    	float:left;
-		margin-top: 20px;
-		margin-bottom: 20px;
-    }
-	.carousel-inner .item img {
-        margin: auto;
-        width:100%;
-        height:500px;
-    }
-</style>
-<body> -->
     <div class="menu">
     <nav class="navbar navbar-expand-lg bg-success" role="navigation">
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -54,5 +23,3 @@
 		</div>
     </nav>
 	</div>    
-</body>    
-</html>

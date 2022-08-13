@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" width="100%">
         <br>
         <hr>
         <img style="float: right;" src="img/weblogo.jpg" width="300px"; height="85px">

@@ -14,6 +14,7 @@ class ProductController extends Controller
     {
         $data = Product:: all();
         return view('admin.product.index',['product' => $data]);
+        return view('/admin.layout.homapage',['product' => $data]);
     }
 
     public function create()

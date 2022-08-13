@@ -1,3 +1,11 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <style>
     .product-box {
         margin-bottom: 30px;
@@ -30,10 +38,9 @@
     <div class="product-box">
         <h3>{{$product ['product_name']}}</h3>
         <hr width="200px"> 
-        <p>{{$product ['category cate_name']}}</p>
         <p><img src="{{ asset('img/' . $product->product_img) }}" /><p>
         <strong>Price: {{$product ['product_price']}}</strong>
-        <a class="btn btn-success btn-round" href='detail.php'>Details</a>  
+        <p><a class="btn btn-success btn-round" href='detail.php'>Details</a><p>  
     </div>
 </div>    
 @endforeach

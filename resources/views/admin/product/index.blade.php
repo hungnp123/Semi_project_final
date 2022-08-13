@@ -9,8 +9,8 @@
 <style>
     .product-box {
         margin-bottom: 30px;
-    	height: auto;
-    	width: auto;
+    	height: 670px;
+    	width: 360px;
         padding-top: 10px;
         padding-bottom:10px;
         padding-left: 30px;

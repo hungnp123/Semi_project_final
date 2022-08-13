@@ -85,6 +85,11 @@
         width: 250px;
         height: 370px;
     }
+    .footer{
+        width: 100%;
+        margin-top: 75%;
+        padding: 1rem;
+    }
 </style>
 <body>
 <div class="head">

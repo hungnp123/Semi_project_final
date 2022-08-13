@@ -1,4 +1,4 @@
-<div class="footer" width="100%">
+<div class="footer">
         <br>
         <hr>
         <img style="float: right;" src="img/weblogo.jpg" width="300px"; height="85px">
@@ -12,6 +12,6 @@
             <br>
             <p style="text-align: center;">© COPYRIGHT 2022 HMC BOOKSHOP. ALL RIGHTS RESERVED.</p>
             <br>
-    </div>
+</div>
 </body>       
 </html>

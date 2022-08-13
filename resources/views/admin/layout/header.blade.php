@@ -11,6 +11,9 @@
     .header{
         margin-top: 30px;
     }
+    .body {
+        background-image: src="backgound.jpg"
+    }
     .profile{
         width: 30%;
         height: auto;
@@ -42,6 +45,7 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    ul li:hover ul {display: block;}
 	.carousel-inner .item img {
         margin: auto;
         width:100%;
@@ -68,7 +72,7 @@
         padding-bottom:10px;
         padding-left: 30px;
         padding-right: 30px;
-    	border-radius: 4%;
+    	border-radius: 3%;
     	margin-left: 30px;
     	margin-right: 30px;
     	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

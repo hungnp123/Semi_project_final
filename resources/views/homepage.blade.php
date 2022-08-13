@@ -7,6 +7,7 @@
 <div class = "menubar">
 @include('admin.layout.menubar')
 </div>
+<body>
 <div class = "content">
     <div class="product">
         <br>
@@ -27,6 +28,7 @@
         @endforeach       
     </div>  
 </div>
+</body>
 <div class = "footer"> 
 @include('admin.layout.footer')
 </div>

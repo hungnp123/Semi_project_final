@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 
+use App\Models\Author;
+
+use App\Models\Category;
+
 use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
@@ -19,37 +23,43 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('admin.product.create');
+        $category = Category::all();
+        $author = Author::all();
+        return view('admin.product.create',['category' => $category],['author' => $author]);
     }
 
     public function store(Request $request)
     {
         if ($request->isMethod('POST')) {  
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
+                'product_name' => 'required',
                 'description' => 'required',
                 'product_img' => 'required|image|mimes:jpg,jpeg,png|max:1000',
-                'price' => 'required'
+                'product_price' => 'required',
+                'product_year' => 'required',
             ]);
         if ($validator->fails()) {
             return redirect()->back()
             ->withErrors($validator)
             ->withInput();    
          }  
-        if ($request->hasFile('imageProduct')) {  
-            $file = $request->file('imageProduct');
-            $path = public_path('image/product');
+        if ($request->hasFile('product_img')) {  
+            $file = $request->file('product_img');
+            $path = public_path('img');
             $fileName = time() . '_' . $file->getClientOriginalName();
             $file->move($path, $fileName);
         } else {   
             $fileName = 'noname.jpg';
         }
             $newProduct = new Product();
-            $newProduct->name = $request->name;
-            $newProduct->price = $request->price;
+            $newProduct->product_id = $request->product_id; 
+            $newProduct->product_name = $request->product_name;
+            $newProduct->product_price = $request->product_price;
             $newProduct->description = $request->description;
-            $newProduct->image = $fileName;
-            $newProduct->category_id = $request->category;
+            $newProduct->product_img = $fileName;
+            $newProduct->product_year = $request->product_year;
+            $newProduct->product_cate = $request->cate_id;
+            $newProduct->product_author = $request->author_id;
             $newProduct->save();
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');

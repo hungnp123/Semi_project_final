@@ -17,7 +17,12 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Category', 'cate_id');
     }
+    public function author()
+    {
+        return $this->belongsTo('App\Models\Author', 'author_id');
+    }
     protected $fillable = [
-        'product_name', 'product_img','product_price', 'product_year','description','product_author','product_cate'
+        'product_name', 'product_img','product_price', 'product_year','description','product_author','product_cate','product_id'
     ];
+    public $timestamps = false;
 }

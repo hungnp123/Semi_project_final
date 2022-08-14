@@ -38,7 +38,6 @@ Route::get('/signup', function (){
 });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
-
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');
 Route::get('/category/show',[CategoryController::class, 'show']) -> name('category.show');
@@ -52,4 +51,4 @@ Route::get('/product/create',[ProductController::class, 'create']) -> name('prod
 Route::get('/product/edit',[ProductController::class, 'edit']) -> name('product.edit');
 Route::get('/product/update',[ProductController::class, 'update']) -> name('product.update');
 Route::get('/product/delete',[ProductController::class, 'delete']) -> name('product.delete');
-Route::get('/product/store',[ProductController::class, 'store']) -> name('product.store');
+Route::post('/product/store',[ProductController::class, 'store']) -> name('product.store');

@@ -37,6 +37,7 @@
 		padding-top: 50px;
 	}
     .menu{
+        width: 100%;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
     .menu ul li{
@@ -64,8 +65,8 @@
         font-size: 16px;
     }
     .product-box {
-        margin-bottom: 30px;
-        margin-top:30px;
+        margin-bottom: 25px;
+        margin-top:25px;
     	height: auto;
     	width: 310px;
         padding-top: 10px;
@@ -115,10 +116,22 @@
     .flip-box-back {
         font-size:14px;
         transform: rotateY(180deg);
+    } 
+    .pagination{
+        
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        color: black;
+        border: 3px solid green;
+        padding: 15px;
+        margin-left: 44%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
     }    
     .footer{
         width: 100%;
-        margin-top: 75%;
         padding: 1rem;
     }
 </style>

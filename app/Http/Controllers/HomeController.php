@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function show_content()
     {
-        $data = Product:: all();
+        $data = Product::paginate(8);
         return view('/homepage',['product' => $data]);
     }
 }

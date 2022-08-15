@@ -66,20 +66,21 @@ class ProductController extends Controller
         }    
     }
 
-    public function edit($id)
+    public function edit($product_id)
     {
-        $categories = Category::all();
-        $product = Product::with('category') -> find($id);
-            return view('product.edit', ['product' => $product, 'categories' => $categories]);
+        $category = Category::all();
+        $product = Product::with('product_cate') -> find($cate_id);
+            return view('product.edit', ['product' => $product, 'category' => $category]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $product_id)
     {  
         if ($request->isMethod('POST')) {  
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
+                'product_name' => 'required',
                 'description' => 'required',
-                'price' => 'required'   
+                'product_price' => 'required',
+                'product_year' => 'required'   
             ]);
             if ($validator->fails()) {
                 return redirect()->back()  
@@ -87,23 +88,24 @@ class ProductController extends Controller
                 ->withInput();
             }
             $fileName="";
-            if ($request->hasFile('imageProduct')) {
-                $file = $request->file('imageProduct');
-                $path = public_path('image/product');
+            if ($request->hasFile('product_img')) {
+                $file = $request->file('product_img');
+                $path = public_path('img');
                 $fileName = time() . '_' . $file->getClientOriginalName();
                 $file->move($path, $fileName);   
             }
-            $product = Product::find($id);
+            $product = Product::find($product_id);
             if ($product != null) {
-                $product->name = $request->name; 
-                $product->price = $request->price;
+                $product->product_name = $request->name; 
+                $product->product_price = $request->price;
+                $product->product_year = $request->year;
                 $product->category_id = $request->category;
                 $product->description = $request->description;
                 if ($fileName) {
-                    $product->image = $fileName;
+                    $product->product_img = $fileName;
                 }   
                 $product->save();
-                return redirect()->route('products.index')
+                return redirect()->route('product.index')
                 ->with('success', 'Product updated successfully');
             }
             else

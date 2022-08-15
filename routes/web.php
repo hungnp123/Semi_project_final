@@ -50,8 +50,8 @@ Route::post('/category/store', [CategoryController::class, 'store']) -> name('ca
 
 Route::get('/product/index',[ProductController::class, 'index']) -> name('product.index');
 Route::get('/product/create',[ProductController::class, 'create']) -> name('product.create');
-Route::get('/product/edit',[ProductController::class, 'edit']) -> name('product.edit');
-Route::get('/product/update',[ProductController::class, 'update']) -> name('product.update');
+Route::get('/product/edit/{product_id}',[ProductController::class, 'edit']) -> name('product.edit');
+Route::post('/product/update/{product_id}',[ProductController::class, 'update']) -> name('product.update');
 Route::get('/product/delete',[ProductController::class, 'delete']) -> name('product.delete');
 Route::post('/product/store',[ProductController::class, 'store']) -> name('product.store');
 

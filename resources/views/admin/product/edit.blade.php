@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h2>Edit Product</h2>
+        </div>
+        <div class="pull-right">
+            <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+        </div>
+    </div>
+</div>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+<form action="{{ route('product.update',$product->product_id) }}" method="POST" enctype="multipart/form-data">
+@csrf
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Name:</strong>
+                <input type="text" name="product_name" class="form-control" placeholder="Name" value="{{ $product->product_name}}">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Price:</strong>
+                <input type="text" name="product_price" class="form-control" placeholder="Price" value="{{ $product->product_price }}">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Category:</strong>
+                <select name="category" class="form-control">
+                    @foreach($categories as $category)
+                        <option value="{{$category->cate_id}}">{{$category->cate_name}}</option>
+                    @endforeach
+                </select>
+            </div>  
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Publish years:</strong>
+                <input type="number" name="product_year" class="form-control" placeholder="Year" value="{{ $product->product_year}}">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Author:</strong>
+                <select name="product_author" class="form-control">
+                    @foreach($author as $authors)
+                        <option value="{{$authors->author_id}}">{{$authors->author_name}}</option>
+                    @endforeach
+                </select>
+            </div>  
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Image:</strong>
+                        <img src="{{ asset('img/'.$product->product_img) }}" alt="" border=3 height=150 width=200>
+                    </div>
+                </div>
+                <input type="file" class="form-control" placeholder="Image" value="" name="imageProduct" />
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Description:</strong>
+                <textarea class="form-control" style="height:150px" name="description" placeholder="Description">{{ $product->description }}</textarea>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

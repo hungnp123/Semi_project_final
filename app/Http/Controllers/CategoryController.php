@@ -49,33 +49,17 @@ class CategoryController extends Controller
         $category = Category::find($cate_id);
         return view('admin.category.edit', ['category' => $category]);
     }  
-    public function update(Request $request, $cate_id)
-    { 
-        if ($request->isMethod('POST')) {
-            $validator = Validator::make($request->all(), [
-                'cate_name' => 'required',
-                'cate_des' => 'required',
-            ]);
-            $cate_id=null;
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
+    public function update(Request $request, $cate_id){
+        // Tìm đến đối tượng muốn update
         $category = Category::find($cate_id);
-        if ($category != null) {
-            $category->cate_name = $request->cate_name;
-            $category->cate_des = $request->cate_des;
-            $category->save();
-            return redirect()->route('category.index') 
-            ->with('success', 'Category updated successfully');    
-        }  
-        else 
-        {
-            return redirect()->route('category.index')
-            ->with('Error', 'Category not update');
-        } 
-        }
+
+        // gán dữ liệu gửi lên vào biến data
+        $data = $request->all();
+        dd($data);
+
+        // Update user
+        Category::update($data);
+        echo"success update category";
     }
 
     public function destroy($id)

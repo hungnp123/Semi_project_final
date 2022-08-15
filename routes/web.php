@@ -44,7 +44,7 @@ Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepag
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');
 Route::get('/category/edit/{cate_id}',[CategoryController::class, 'edit']) -> name('category.edit');
-Route::put('/category/update/{cate_id}',[ProductController::class, 'update']) -> name('category.update');
+Route::post('/category/update/{cate_id}',[ProductController::class, 'update']) -> name('category.update');
 Route::get('/category/delete',[CategoryController::class, 'destroy']) -> name('category.destroy');
 Route::post('/category/store', [CategoryController::class, 'store']) -> name('category.store');
 

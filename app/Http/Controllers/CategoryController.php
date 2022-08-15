@@ -45,12 +45,12 @@ class CategoryController extends Controller
             ->with('success', 'Category created successfully.');
         }
     }
-    public function update(Request $request, $id)
+    public function edit(Request $request, $cate_id)
     { 
         if ($request->isMethod('POST')) {
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'description' => 'required',
+                'cate_name' => 'required',
+                'cate_des' => 'required',
             ]);
             $cate_id=null;
         if ($validator->fails()) {
@@ -58,10 +58,10 @@ class CategoryController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        $category = Category::find($id);
+        $category = Category::find($cate_id);
         if ($category != null) {
-            $category->name = $request->name;
-            $category->description = $request->description;
+            $category->cate_name = $request->cate_name;
+            $category->cate_des = $request->cate_des;
             $category->save();
             return redirect()->route('category.index') 
             ->with('success', 'Category updated successfully');    

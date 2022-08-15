@@ -20,8 +20,7 @@ class CategoryController extends Controller
     public function create()
     {
         return view('admin.category.create');
-    }
-
+    } 
     public function store(Request $request)
     {
         if ($request->isMethod('POST')) {
@@ -45,7 +44,12 @@ class CategoryController extends Controller
             ->with('success', 'Category created successfully.');
         }
     }
-    public function edit(Request $request, $cate_id)
+    public function edit($cate_id)
+    {
+        $category = Category::find($cate_id);
+        return view('admin.category.edit', ['category' => $category]);
+    }  
+    public function update(Request $request, $cate_id)
     { 
         if ($request->isMethod('POST')) {
             $validator = Validator::make($request->all(), [

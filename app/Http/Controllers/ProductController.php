@@ -58,8 +58,8 @@ class ProductController extends Controller
             $newProduct->description = $request->description;
             $newProduct->product_img = $fileName;
             $newProduct->product_year = $request->product_year;
-            $newProduct->product_cate = $request->cate_id;
-            $newProduct->product_author = $request->author_id;
+            $newProduct->product_cate = $request->category;
+            $newProduct->product_author = $request->author;
             $newProduct->save();
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');

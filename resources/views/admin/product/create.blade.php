@@ -84,8 +84,8 @@
             <div class="form-group">
                 <strong>Category:</strong>
                 <select name="product_cate" class="form-control">
-                    @foreach($category as $category)
-                        <option value="{{$category->cate_id}}">{{$category->cate_name}}</option>
+                    @foreach($category as $categories)
+                        <option value="{{$categories->cate_id}}">{{$categories->cate_name}}</option>
                     @endforeach
                 </select>
             </div>

@@ -31,8 +31,8 @@ Route::get('/footer', function () {
 Route::get('/homepage', function (){
     return view('/homepage');
 });
-Route::get('/admin', function () {
-    return view('/admin');
+Route::get('/manager', function () {
+    return view('/managerHP');
 });
 Route::get('/login', function (){
     return view('/login');
@@ -42,7 +42,7 @@ Route::get('/signup', function (){
 });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
-Route::get('/admin',[AdminController::class, 'show_content']) -> name('homepage');
+Route::get('/admin',[AdminController::class, 'show_content']) -> name('admin');
 
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');

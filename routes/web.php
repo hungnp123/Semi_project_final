@@ -41,18 +41,19 @@ Route::get('/signup', function (){
 });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
+
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');
 Route::get('/category/edit/{cate_id}',[CategoryController::class, 'edit']) -> name('category.edit');
-Route::post('/category/update/{cate_id}',[ProductController::class, 'update']) -> name('category.update');
-Route::get('/category/delete',[CategoryController::class, 'destroy']) -> name('category.destroy');
+Route::post('/category/update/{cate_id}',[CategoryController::class, 'update']) -> name('category.update');
+Route::get('/category/delete/{cate_id}',[CategoryController::class, 'destroy']) -> name('category.destroy');
 Route::post('/category/store', [CategoryController::class, 'store']) -> name('category.store');
 
 Route::get('/product/index',[ProductController::class, 'index']) -> name('product.index');
 Route::get('/product/create',[ProductController::class, 'create']) -> name('product.create');
-Route::get('/product/edit/{product_id}',[ProductController::class, 'edit']) -> name('product.edit');
+Route::get('/product/edit/{product_id}/{cate_id}',[ProductController::class, 'edit']) -> name('product.edit');
 Route::post('/product/update/{product_id}',[ProductController::class, 'update']) -> name('product.update');
-Route::get('/product/delete',[ProductController::class, 'delete']) -> name('product.delete');
+Route::get('/product/delete/{product_id}',[ProductController::class, 'delete']) -> name('product.delete');
 Route::post('/product/store',[ProductController::class, 'store']) -> name('product.store');
 
 /*Banner*/

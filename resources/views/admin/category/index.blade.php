@@ -18,6 +18,7 @@
         <td>No</td>
         <td>Category Name</td>
         <td>Description </td>
+        <td>Action</td>
     </tr>
 
     @foreach ($category as $category)
@@ -25,6 +26,7 @@
         <td>{{$category['cate_id']}}</td>
         <td>{{$category['cate_name']}}</td>
         <td>{{$category['cate_des']}}</td>
+        <td><a class="btn btn-primary" href="{{ route('category.destroy',$category->cate_id) }}">Delete</a></td>
     </tr>
     @endforeach
 

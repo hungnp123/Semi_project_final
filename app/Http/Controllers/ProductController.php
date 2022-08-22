@@ -116,10 +116,10 @@ class ProductController extends Controller
         } 
     }
 
-    public function delete($id)
+    public function delete($product_id)
     {
-        $product = Product::find($id); 
-        $image_path = "/image/product/.$product->image"; // Value is not URL but directory file path
+        $product = Product::find($product_id); 
+        $image_path = "/image/product/.$product->product_img"; // Value is not URL but directory file path
         if(File::exists($image_path)) { 
             File::delete($image_path);    
         }

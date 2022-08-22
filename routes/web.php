@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +31,8 @@ Route::get('/footer', function () {
 Route::get('/homepage', function (){
     return view('/homepage');
 });
-Route::get('/content', function (){
-    return view('/content');
+Route::get('/admin', function () {
+    return view('/admin');
 });
 Route::get('/login', function (){
     return view('/login');
@@ -41,6 +42,7 @@ Route::get('/signup', function (){
 });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
+Route::get('/admin',[AdminController::class, 'show_content']) -> name('homepage');
 
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');

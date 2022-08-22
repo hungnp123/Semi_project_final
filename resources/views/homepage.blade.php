@@ -18,20 +18,21 @@
         @foreach ($product as $products)
             <div class="single-product">
                 <div class="product-box">
-                    <h4>{{$products ['product_name']}}</h4>
+                    <h4 style="color: #FFFAFA;">{{$products ['product_name']}}</h4>
                     <hr width="200px"> 
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <p><img src="{{ asset('img/' . $products->product_img) }}" /><p>
                             </div>
-                            <div class="flip-box-back">
+                            <div style="text-align: justify;" class="flip-box-back">
                                 <br>
                                 <strong>Description: </strong>{{$products ['description']}} 
                             </div>
                         </div>
-                    </div>         
+                    </div>        
                     <strong>Price: {{$products ['product_price']}}</strong>
+                    <br>
                     <a class="btn btn-success btn-round" href='detail.php'>Details</a>  
                 </div>
             </div> 

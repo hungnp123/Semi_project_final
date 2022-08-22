@@ -10,9 +10,7 @@
 <style type="text/css">
     .header{
         margin-top: 30px;
-    }
-    .body {
-        background-image: src="backgound.jpg"
+        background-color: #8FBC8F;
     }
     .profile{
         width: 30%;
@@ -80,6 +78,7 @@
  		background: #5F9EA0;
     }
     .single-product{
+        font-size: 16px;
         float:left;
 		text-align: center;
 		width: auto;
@@ -114,7 +113,7 @@
         backface-visibility: hidden;
     }
     .flip-box-back {
-        font-size:14px;
+        font-size:15px;
         transform: rotateY(180deg);
     } 
     .pagination{
@@ -136,7 +135,7 @@
     }
 </style>
 <body>
-<div class="head">
+<div class="header">
     <div class="profile" style="margin-left: 30px; font-size: 24px">
     <div class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown"><img src="img/usericon.jpg" width="50px" height="50px"></a">

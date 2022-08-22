@@ -1,5 +1,5 @@
     <div class="menu">
-    <nav class="navbar navbar-expand-lg bg-white" role="navigation">
+    <nav class="navbar navbar-expand-lg bg-success" role="navigation">
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">

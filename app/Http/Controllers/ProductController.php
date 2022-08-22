@@ -37,6 +37,7 @@ class ProductController extends Controller
                 'product_img' => 'required|image|mimes:jpg,jpeg,png|max:1000',
                 'product_price' => 'required',
                 'product_year' => 'required',
+                
             ]);
         if ($validator->fails()) {
             return redirect()->back()
@@ -58,10 +59,10 @@ class ProductController extends Controller
             $newProduct->description = $request->description;
             $newProduct->product_img = $fileName;
             $newProduct->product_year = $request->product_year;
-            $newProduct->product_cate = $request->category;
-            $newProduct->product_author = $request->author;
+            $newProduct->product_cate = $request->product_cate;
+            $newProduct->product_author = $request->product_author;
             $newProduct->save();
-        return redirect()->route('products.index')
+        return redirect()->route('product.index')
             ->with('success', 'Product created successfully.');
         }    
     }

@@ -89,7 +89,7 @@ CREATE TABLE `product` (
   `product_year` varchar(100) NOT NULL,
   `description` varchar(500) NOT NULL,
   `product_author` int(11) NOT NULL,
-  `product_cate` int(11) NOT NULL,
+  `product_cate` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

@@ -119,14 +119,6 @@ class ProductController extends Controller
 
     public function delete($product_id)
     {
-        // $product = Product::find($product_id); 
-        // $image_path = "/image/product/.$product->product_img"; // Value is not URL but directory file path
-        // if(File::exists($image_path)) { 
-        //     File::delete($image_path);    
-        // }
-        // $product->delete();
-        // return redirect()->route('products.index')
-        //     ->with('success', 'Product deleted successfully');
         $product = Product::find($product_id);
         $product->delete();
         return redirect()->route('product.index')

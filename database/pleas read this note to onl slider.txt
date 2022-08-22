@@ -1,6 +1,0 @@
-khi bạn kéo code banner của tôi về xin hãy tạo bảng trong databeses mysql là slider 
-id primary key
-varchar title
-varchar description
-varchar image
-varchar status

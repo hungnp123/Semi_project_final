@@ -42,7 +42,7 @@ Route::get('/signup', function (){
 });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
-Route::get('/admin',[AdminController::class, 'show_content']) -> name('admin');
+Route::get('/manager',[AdminController::class, 'show_content']) -> name('admin');
 
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');

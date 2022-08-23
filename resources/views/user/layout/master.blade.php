@@ -10,7 +10,7 @@
 <style type="text/css">
     .header{
         margin-top: 30px;
-        background-color: #8FBC8F;
+        margin-bottom: 30px;
     }
     .profile{
         width: 30%;
@@ -27,23 +27,34 @@
     .search {
         width: 30%;
         height:auto;
-        float: right;
+        float: left;
         text-align: right;
         margin-top: 15px;
     }
-	.banner {
-		padding-top: 50px;
-	}
+
     .menu{
+        margin-top: 30px;
+        background-color: #5F9EA0;
         width: 100%;
+        height: 50px;
+        padding-top: 10px;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        float: left;
     }
     .menu ul li{
     	list-style: none;
-		margin: 12px;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        float: left;
     }
+    .menu a{
+        font-family: Courier;
+    	color:white;
+        padding-top: 10px;
+        font-size: 16px;
+        padding: 30px;
+    }
+    .banner {
+        padding-top: 148px;
+	}
     ul li:hover ul {display: block;}
 	.carousel-inner .item img {
         margin: auto;
@@ -71,7 +82,7 @@
         padding-bottom:10px;
         padding-left: 30px;
         padding-right: 30px;
-    	border-radius: 3%;
+    	border-radius: 2%;
     	margin-left: 30px;
     	margin-right: 30px;
     	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
@@ -135,26 +146,22 @@
     }
 </style>
 <body>
-<div class="header">
-    <div class="profile" style="margin-left: 30px; font-size: 24px">
-    <div class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown"><img src="img/usericon.jpg" width="50px" height="50px"></a">
-			<ul class="dropdown-menu">
-				<li><a href="login">Login</a></li>
-                <li><a href="signup">Sign Up</a></li>
-				<li><a href="logout">Logout</a></li>
-			</ul>
-    </div>    
-    </div>
-    <div class="center">                                                                                      
-        <a href="homepage.php"><img src="img/weblogo.jpg" width="250px" height="68px"></a>
-    </div>
-    <div class="search">
-		<form class="form-inline ml-auto" action="{{ route('product.search') }}" method="get">
-			<input type="text" class="form-control" name="product_name" placeholder="Search a book" />
-			<input type="submit" class="btn btn-success btn-round" name="Search" value="search" />
-		</form>
-	</div> 
-</div>    
-<!-- </body>
-</html> -->
+    <!-- header section starts  -->
+        @include('user.layout.header')
+    <!-- header section ends -->
+
+    <!-- mennu -->
+        @include('user.layout.menubar')
+    <!-- mennu -->
+
+    <!-- banner -->
+        @include('user.layout.banner')
+    <!-- banner -->
+
+        @yield('content')
+
+    <!-- footer section starts  -->
+        @include('user.layout.footer')
+    <!-- footer section ends -->
+</body>
+</html>

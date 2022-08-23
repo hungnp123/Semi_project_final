@@ -21,19 +21,19 @@ use App\Http\Controllers\SearchController;
 */
 
 Route::get('/header', function () {
-    return view('admin/layout/header');
+    return view('user/layout/header');
 });
 Route::get('/menu', function () {
-    return view('admin/layout/menubar');
+    return view('user/layout/menubar');
 });
 Route::get('/banner', function () {
-    return view('admin/layout/banner');
+    return view('user/layout/banner');
 });
 Route::get('/footer', function () {
-    return view('admin/layout/footer');
+    return view('user/layout/footer');
 });
 Route::get('/homepage', function (){
-    return view('/homepage');
+    return view('user/homepage');
 });
 Route::get('/manager', function () {
     return view('/managerHP');
@@ -45,8 +45,8 @@ Route::get('/manager', function () {
 //     return view('/signup');
 // });
 /*controller space:*/
-Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
-Route::get('/manager',[AdminController::class, 'show_content']) -> name('admin');
+Route::get('/homepage',[HomeController::class, 'show_content']) -> name('Homepage');
+Route::get('/detail/{product_id}',[DetailController::class, 'detail']) -> name('detail');
 
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');
 Route::get('/category/create',[CategoryController::class, 'create']) -> name('category.create');

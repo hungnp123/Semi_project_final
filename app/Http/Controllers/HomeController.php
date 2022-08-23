@@ -11,6 +11,6 @@ class HomeController extends Controller
     public function show_content()
     {
         $data = Product::paginate(8);
-        return view('/homepage',['product' => $data]);
+        return view('user/homepage',['product' => $data]);
     }
 }

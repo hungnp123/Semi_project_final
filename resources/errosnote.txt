@@ -1,7 +1,0 @@
-những phần đang gặp lỗi là:
-- admin/category/edit gặp lỗi vadiator khi edit bảng category lại thông báo chưa nhập giá trị bảng product dù không hề nhăc đến bảng prodcut.
-- admin/category/index phần delete bị lỗi có thể trong phần category controller.
-
-- product/create bị lỗi ko thêm mới sản phẩm được vì ko nhận được id khóa ngoại các data khác như name hay hình nahr vẫn nhận bình thường.
-- product/index gặp lỗi khi nhập "http://127.0.0.1:8000/product/edit/14/2" trong đó 14 là product_id còn 2 là cate_id thì lại bị not found
-- phần delete trong product/index giông với phần category

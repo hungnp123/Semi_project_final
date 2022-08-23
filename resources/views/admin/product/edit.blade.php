@@ -54,18 +54,7 @@
                 <input type="number" name="product_year" class="form-control" placeholder="Year" value="{{ $product->product_year}}">
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Author:</strong>
-                <select name="product_author" class="form-control">
-                    @foreach($author as $authors)
-                        <option value="{{$authors->author_id}}">{{$authors->author_name}}</option>
-                    @endforeach
-                </select>
-            </div>  
-        </div>
-
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">

@@ -69,9 +69,9 @@ class ProductController extends Controller
 
     public function edit($product_id)
     {
-        $category = Category::all();
-        $product = Product::with('product_cate') -> find($cate_id);
-            return view('product.edit', ['product' => $product, 'category' => $category]);
+            $category = Category::all();
+            $product = Product::find($product_id);
+            return view('admin.product.edit', ['product' => $product],['categories'=>$category]);
     }
 
     public function update(Request $request, $product_id)
@@ -97,10 +97,10 @@ class ProductController extends Controller
             }
             $product = Product::find($product_id);
             if ($product != null) {
-                $product->product_name = $request->name; 
-                $product->product_price = $request->price;
-                $product->product_year = $request->year;
-                $product->category_id = $request->category;
+                $product->product_name = $request->product_name; 
+                $product->product_price = $request->product_price;
+                $product->product_year = $request->product_year;
+                $product->product_cate = $request->category;
                 $product->description = $request->description;
                 if ($fileName) {
                     $product->product_img = $fileName;

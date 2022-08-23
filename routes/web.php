@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SignUpController;
+use App\Http\Controllers\SearchController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +61,7 @@ Route::get('/product/edit/{product_id}/{cate_id}',[ProductController::class, 'ed
 Route::post('/product/update/{product_id}',[ProductController::class, 'update']) -> name('product.update');
 Route::get('/product/delete/{product_id}',[ProductController::class, 'delete']) -> name('product.delete');
 Route::post('/product/store',[ProductController::class, 'store']) -> name('product.store');
+Route::get('/product/search', [SearchController::class, 'BookSearch']) ->name('product.search');
 
 /*Banner*/
 Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('manager.slider.index');

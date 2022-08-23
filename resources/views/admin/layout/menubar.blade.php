@@ -8,7 +8,7 @@
 							<span class="icon-bar"></span>                        
 						</button>
 			<ul class="navbar-nav">
-				<li><a href="homepage.php"><span class=" glyphicon glyphicon-home"> Home</a></li>
+				<li><a href="homepage"><span class=" glyphicon glyphicon-home"> Home</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bookmark"> Category<span class="caret"></span></a>
 							<ul class="dropdown-menu">

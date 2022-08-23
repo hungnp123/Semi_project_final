@@ -5,6 +5,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignUpController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,12 +36,12 @@ Route::get('/homepage', function (){
 Route::get('/manager', function () {
     return view('/managerHP');
 });
-Route::get('/login', function (){
-    return view('/login');
-});
-Route::get('/signup', function (){
-    return view('/signup');
-});
+// Route::get('/login', function (){
+//     return view('/login');
+// });
+// Route::get('/signup', function (){
+//     return view('/signup');
+// });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('homepage');
 Route::get('/manager',[AdminController::class, 'show_content']) -> name('admin');
@@ -69,4 +71,11 @@ Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'e
 
 Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,'update'])->name('update');
 
-Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy');
+Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy'); 
+
+Route::group(['prefix' => 'user'], function(){
+    Route::get('login', [LoginController::class, 'getLogin']);
+    Route::post('login', [LoginController::class, 'postLogin']);
+    Route::get('/signup', [SignUpController::class, 'getSignUp']);
+    Route::post('/postsignup', [SignUpController::class, 'postSignUp']);
+});

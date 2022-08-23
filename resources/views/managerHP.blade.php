@@ -35,7 +35,7 @@
         <li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bookmark"> Category<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-                @foreach ($category as $data)
+                @foreach ($category ?? '' as $data)
 				    <li><a href="{{ route('category.index') }}">Show category</a></li>
 					<li><a href="{{ route('category.create')}}">Create category</a></li>
 					<li><a href="{{ route('category.edit',$data -> cate_id)  }}">Edit category</a></li>

@@ -84,17 +84,17 @@ span.su {
         </style>
 </head>
 <body>
-    <form action="action_page.php" method="post">
-  <div class="imgcontainer">
+    <form action="" method="post">
+    <div class="imgcontainer">
     <img src="img/weblogo.jpg" alt="Avatar" class="avatar">
   </div>
-   
+  @csrf
   <div class="container">
     <label for="uname"><b>Username:</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="user_name" required>
 
     <label for="psw"><b>Password:</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit">Login</button>
     <label>

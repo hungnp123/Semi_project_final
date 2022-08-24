@@ -1,7 +1,7 @@
 @extends('user.layout.master')
 
 
- 
+ @section('content')
 
   <div class="contaimer mt -5">
     <div class="row">

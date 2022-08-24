@@ -15,7 +15,6 @@ class SliderController extends Controller
         return view('admin.slider.index',compact('slider'));
     }
 
-    
     public function create()
     {
         //

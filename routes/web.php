@@ -82,3 +82,15 @@ Route::group(['prefix' => 'user'], function(){
     Route::get('/signup', [SignUpController::class, 'getSignUp']);
     Route::post('/postsignup', [SignUpController::class, 'postSignUp']);
 });
+/**user */
+Route::get('/home-user', [App\Http\Controllers\UserController::class,'index'])->name('index');
+
+Route::get('/add-user', [App\Http\Controllers\UserController::class,'create'])->name('create');
+
+Route::post('/store-user', [App\Http\Controllers\UserController::class,'store'])->name('store');
+
+Route::get('/edit-user/{id}', [App\Http\Controllers\UserController::class,'edit'])->name('edit');
+
+Route::put('/update-user/{id}', [App\Http\Controllers\UserController::class,'update'])->name('update');
+
+Route::get('/destroy-user/{id}', [App\Http\Controllers\UserController::class,'destroy'])->name('destroy'); 

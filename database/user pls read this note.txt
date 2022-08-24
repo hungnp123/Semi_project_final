@@ -1,0 +1,12 @@
+khi bạn kéo code của tôi user CRUD về thì hãy làm như sau để nó hoạt động
+hãy tạo bảng user trên database hoặc vào teminal gõ lệnh php artisan migrate
+
+id int
+user_name varchar 255
+full_name varchar 255
+password varchar  255
+
+role varchar 255 
+status varchar 255
+
+123

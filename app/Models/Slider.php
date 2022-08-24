@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slider extends Model
 {
-    use HasFactory;
+    
+use HasFactory;
     public $timestamps = false;
     protected $table= 'slider';
     protected $fillable= [
         'title','description','status','image'   
     ];
-
 }

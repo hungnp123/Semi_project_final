@@ -28,7 +28,7 @@
                 </div>
             </div> 
         @endforeach 
-        <div class="pagination"> {{ $product -> links() }} </div> 
+        
         @else
         <p>Sorry we couldn't find this product please check other products.</p>
         @endif

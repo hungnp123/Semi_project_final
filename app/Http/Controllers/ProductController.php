@@ -117,6 +117,12 @@ class ProductController extends Controller
         } 
     }
 
+    public function detail($product_id)
+    {
+        $products =Product::find($product_id);
+        return view('user.detail', compact('products'));
+    } 
+
     public function delete($product_id)
     {
         $product = Product::find($product_id);

@@ -15,13 +15,13 @@ class LoginController extends Controller
     public function postLogin (Request $request) {
         $arr = ['user_name' => $request->user_name, 'password' => $request -> password]; 
         if(Auth::attempt($arr)) {
-            return redirect()->route('homepage'); 
+            return view ('user/homepage'); 
         }else {
             dd('Failed');
         }
     }
     public function getLogOut() {
         Auth::logout(); 
-        return redirect()-> intented('login');
+        return redirect()-> intented('user/login');
     }
 }

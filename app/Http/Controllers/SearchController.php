@@ -13,6 +13,6 @@ class SearchController extends Controller
         $data = Product::paginate(8);
         $search=$request->input('product_name'); 
         $products=Product::where('product_name', 'LIKE', '%'.$search.'%') ->get();
-        return view('admin.product.search',['product' => $data],compact('products'));
+        return view('user.search',['product' => $data],compact('products'));
     }
 }

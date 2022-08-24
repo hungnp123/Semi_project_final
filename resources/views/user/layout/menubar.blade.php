@@ -1,5 +1,5 @@
     <div class="menu">
-    <nav class="navbar navbar-expand-lg bg-success" role="navigation">
+    <nav class="navbar navbar-expand-lg bg-transparent" role="navigation">
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -14,7 +14,6 @@
 							<ul class="dropdown-menu">
 								<li><a href="user/login">Login</a></li>
 								<li><a href="user/signup">Sign Up</a></li>
-								<li><a href="cart.php">Team management</a></li>
 							</ul>
 					</li>
 					<li><a href="/product/index"><span class=" glyphicon glyphicon-book"> Books</a></li>

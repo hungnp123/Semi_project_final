@@ -97,7 +97,7 @@ span.su {
 <form action="/user/postsignup" method="post">
 @csrf
   <div class="imgcontainer">
-    <img src="img/weblogo.jpg" alt="Avatar" class="avatar">
+    <img src="/img/weblogo.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">

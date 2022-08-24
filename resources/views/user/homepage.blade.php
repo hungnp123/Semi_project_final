@@ -1,12 +1,5 @@
-<div class = "header">
-@include('admin.layout.header')
-</div>
-<div class = "banner">
-@include('admin.layout.banner')    
-</div>
-<div class = "menubar">
-@include('admin.layout.menubar')
-</div>
+@extends('user.layout.master')
+@section('content')
 <body>
 <div class = "content">
     <div class="product">
@@ -33,14 +26,12 @@
                     </div>        
                     <strong>Price: {{$products ['product_price']}}</strong>
                     <br>
-                    <a class="btn btn-success btn-round" href='detail.php'>Details</a>  
+                    <a class="btn btn-primary" href="{{ route('detail',$products->product_id) }}">Details</a>   
                 </div>
             </div> 
         @endforeach      
     </div> 
 </div>
-<div class="pagination"> {{ $product -> links() }} </div> 
+<div class="pagination"> {{ $product -> links() }} </div>
 </body>
-<div class = "footer"> 
-@include('admin.layout.footer')
-</div>
+@endsection

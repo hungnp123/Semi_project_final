@@ -26,13 +26,13 @@
    		    </ol>
         <div class="carousel-inner" role="listbox">
       		<div class="item active">
-        		<img src="img/banner1.jpg"  alt="banner 1">    
+        		<img src="/img/banner1.jpg"  alt="banner 1">    
       		</div>
      		<div class="item">
-                <img src="img/banner2.jpg"  alt="banner 2">
+                <img src="/img/banner2.jpg"  alt="banner 2">
       		</div>
       		<div class="item">
-        		<img src="img/banner3.jpg" alt="banner 3">
+        		<img src="/img/banner3.jpg" alt="banner 3">
       		</div>
     	</div>
     		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

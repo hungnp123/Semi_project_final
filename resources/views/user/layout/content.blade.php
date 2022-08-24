@@ -1,4 +1,4 @@
-<div class = "content">
+
     <div class="product">
         <br>
         <h1 class= "healing"> New Books</h1>
@@ -28,5 +28,4 @@
             </div> 
         @endforeach      
     </div> 
-</div>
 <div class="pagination"> {{ $product -> links() }} </div> 

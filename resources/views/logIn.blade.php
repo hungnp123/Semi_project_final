@@ -86,7 +86,7 @@ span.su {
 <body>
     <form action="" method="post">
     <div class="imgcontainer">
-    <img src="img/adminlogo.jpg" alt="Avatar" class="avatar">
+    <img src="/img/weblogo.jpg" alt="Avatar" class="avatar">
   </div>
   @csrf
   <div class="container">

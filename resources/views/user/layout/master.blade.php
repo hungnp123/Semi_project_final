@@ -63,6 +63,7 @@
     }
     .product{
         width:100% ;
+        height: 100%;
     }
     .healing {
         font-family: Courier;
@@ -87,6 +88,7 @@
     	margin-right: 30px;
     	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
  		background: #5F9EA0;
+
     }
     .single-product{
         font-size: 16px;
@@ -132,7 +134,6 @@
         color: black;
         text-decoration: none;
         background-color: white;
-        color: black;
         border: 3px solid green;
         padding: 15px;
         margin-left: 44%;
@@ -155,13 +156,17 @@
     <!-- mennu -->
 
     <!-- banner -->
+    <div>
         @include('user.layout.banner')
-    <!-- banner -->
-
+    </div>
+        <!-- banner -->
+    <div class = "content">
         @yield('content')
-
+    </div>
     <!-- footer section starts  -->
+    <div>
         @include('user.layout.footer')
+    </div>
     <!-- footer section ends -->
 </body>
 </html>

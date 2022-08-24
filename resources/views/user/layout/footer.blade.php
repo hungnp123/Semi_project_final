@@ -1,7 +1,7 @@
 <div class="footer">
         <br>
         <hr>
-        <img style="float: right;" src="img/weblogo.jpg" width="300px"; height="85px">
+        <img style="float: right;" src="/img/weblogo.jpg" width="300px"; height="85px">
         <p>Information:</p>
         <ul>
             <li><p>Address: Hanoi,Vietnam</p></li>

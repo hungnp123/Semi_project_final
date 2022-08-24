@@ -15,7 +15,7 @@ class LoginController extends Controller
     public function postLogin (Request $request) {
         $arr = ['user_name' => $request->user_name, 'password' => $request -> password]; 
         if(Auth::attempt($arr)) {
-            return redirect()->route(''); 
+            return view ('user/homepage'); 
         }else {
             dd('Failed');
         }

@@ -1,11 +1,4 @@
-<div class = "header">
-@include('admin.layout.header')
-</div>
-<div class = "banner">
-@include('admin.layout.banner')    
-</div>
-<div class = "menubar">
-@include('admin.layout.menubar')
+@extends('user.layout.master')
 
 
  
@@ -73,5 +66,5 @@
     </div>
   </div>
 
-@include('admin.layout.footer')
+@endsection
 </div>

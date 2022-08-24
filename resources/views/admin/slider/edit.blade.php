@@ -1,11 +1,5 @@
-<div class = "header">
-@include('admin.layout.header')
-</div>
-<div class = "banner">
-@include('admin.layout.banner')    
-</div>
-<div class = "menubar">
-@include('admin.layout.menubar')
+@extends('user.layout.master')
+@section('content')
 <div class="contaimer mt -5">
     <div class="row">
       <div class="col-md-12">
@@ -70,5 +64,5 @@
       </div>
     </div>
   </div>
-@include('admin.layout.footer')
+@endsection
 </div>

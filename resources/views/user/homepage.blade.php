@@ -26,7 +26,7 @@
                     </div>        
                     <strong>Price: {{$products ['product_price']}}</strong>
                     <br>
-                    <a class="btn btn-success btn-round" href='detail.php'>Details</a>  
+                    <a class="btn btn-primary" href="{{ route('detail',$products->product_id) }}">Details</a>   
                 </div>
             </div> 
         @endforeach      

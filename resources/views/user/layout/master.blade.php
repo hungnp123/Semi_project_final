@@ -139,7 +139,21 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-    }    
+    } 
+    .detailbox{
+        margin: 30px;
+    	height: auto;
+    	width: 60%;
+        padding: 30px;
+    	border-radius: 8%;
+    	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
+ 		background: #6495ED;
+    }
+    .detailbox img {
+        width: 250px;
+        height: 370px;
+        float: right;
+    }
     .footer{
         width: 100%;
         padding: 1rem;

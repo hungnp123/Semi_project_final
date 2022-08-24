@@ -41,8 +41,8 @@
         <p><img src="{{ asset('img/' . $product->product_img) }}" /><p>
         <strong>Price: {{$product ['product_price']}}</strong>
         <p><a class="btn btn-success btn-round" href='detail.php'>Details</a><p> 
-        <p><a class="btn btn-primary" href="{{ route('product.delete',$product->product_id) }}">Delete</a><p>      
-        <p><a class="btn btn-primary" href="{{ route('product.edit',$product->product_id) }}">Delete</a><p>        
+        <p><a class="btn btn-danger" href="{{ route('product.delete',$product->product_id) }}">Delete</a><p>      
+        <p><a class="btn btn-primary" href="{{ route('product.edit',$product->product_id) }}">Edit</a><p>        
     </div>
 </div>    
 @endforeach

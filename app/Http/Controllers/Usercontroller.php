@@ -70,18 +70,19 @@ class Usercontroller extends Controller
     }
 
     
-    public function destroy(User $user)
+    public function destroy($id)
     {
         //
-        if (user-> count() > 0 ){
+        $user = User::find($id);
+        
 
                
 
         $user->delete(); 
         
         return redirect()->back()->with('status','user Delete Successfully');
-        }
-        return redirect()->back()->with('status','error ');
+        
+        
 
     }
 }

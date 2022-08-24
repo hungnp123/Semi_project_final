@@ -93,4 +93,4 @@ Route::get('/edit-user/{id}', [App\Http\Controllers\UserController::class,'edit'
 
 Route::put('/update-user/{id}', [App\Http\Controllers\UserController::class,'update'])->name('update');
 
-Route::get('/destroy-user/{user}', [App\Http\Controllers\UserController::class,'destroy'])->name('destroy'); 
+Route::get('/destroy-user/{id}', [App\Http\Controllers\UserController::class,'destroy'])->name('destroy'); 

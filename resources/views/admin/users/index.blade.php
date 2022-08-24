@@ -15,11 +15,11 @@
     
                            <tr>
                               <th>ID</th>
-                              <th>name</th>                           
-                              <th>username</th>
-                              <th>userfullname</th> 
-                              <th>password</th>
-                              
+                              <th>username</th>                           
+                              <th>fullname</th>
+                              <th>password</th> 
+                              <th>role</th>
+                              <th>edit user</th>
                           </tr>
     
                     </thead>

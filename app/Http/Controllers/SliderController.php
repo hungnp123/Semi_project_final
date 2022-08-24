@@ -12,14 +12,14 @@ class SliderController extends Controller
     {
         $slider = Slider::all();
 
-        return view('manager.slider.index',compact('slider'));
+        return view('admin.slider.index',compact('slider'));
     }
 
     
     public function create()
     {
         //
-        return view('manager.slider.create');
+        return view('admin.slider.create');
     }
     public function store(Request $request)
     {   
@@ -53,7 +53,7 @@ class SliderController extends Controller
     {
         $slider = Slider::find($id);
  
-        return view('manager.slider.edit',compact('slider'));
+        return view('admin.slider.edit',compact('slider'));
     }
 
    

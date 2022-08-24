@@ -46,6 +46,7 @@ Route::get('/manager', function () {
 // });
 /*controller space:*/
 Route::get('/homepage',[HomeController::class, 'show_content']) -> name('Homepage');
+Route::get('/admin',[HomeController::class, 'show_cate']) -> name('Homepage');
 Route::get('/detail/{product_id}',[ProductController::class, 'detail']) -> name('detail');
 
 Route::get('/category/index',[CategoryController::class, 'index']) -> name('category.index');

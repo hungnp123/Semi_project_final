@@ -1,13 +1,8 @@
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+@extends('admin.layout.master')
+@section('content')
 <style>
     .new-pd {
+        margin-left:450px;
         padding:30px;
         height:400px;
         width: 40%;
@@ -23,9 +18,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <h2>Add New Category</h2>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
-        </div>
+        <br/>
     </div>
 </div>
 @if ($errors->any())
@@ -59,8 +52,10 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
             <button type="reset" class="btn btn-danger">Reset</button>
+            <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
         </div>
     </div>
 </form>
+@endsection

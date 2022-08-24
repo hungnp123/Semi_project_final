@@ -2,29 +2,23 @@
 
 @section('content')
     <body>
-        <div class="categorybox">
-            <h2>Category</h2>
-            <hr width="60%" text-align="center">
-                <li><a href="{{route('category.index')}}">Show Admin Infomation</a></li>
-				<li><a href="{{route('category.create')}}">Create Admin</a></li>
-        </div>
-        <div class="productlist">
-            <h2>Product</h2>
-            <hr width="60%" text-align="center">
-                <li><a href="{{route('product.index')}}">Show List Products</a></li>
-				<li><a href="{{route('product.create')}}">Create New Prodct</a></li>
-        </div>
-        <div class="userbox">
-            <h2>User</h2>
-            <hr width="60%" text-align="center">
-                <li><a href="{{route('index')}}">Show User Infomation</a></li>
-				<li><a href="{{route('create')}}">Create User</a></li>
-        </div>
-        <div class="sliderbox">
-            <h2>Slider</h2>
-            <hr width="60%" text-align="center">
-                <li><a href="{{route('slider.index')}}">Show User Infomation</a></li>
-				<li><a href="{{route('slider.create')}}">Create Slider</a></li>
-        </div>
+<div class="catelayout">
+<h1>Category</h1>   
+<p><a class="btn btn-Primary" href="{{ route('category.index') }}"> Show more </a></p>     
+    <table>
+    <tr class="thead" style="background-color: #008080; color: white;">
+        <td>No</td>
+        <td>Category Name</td>
+        <td>Description </td>
+    </tr>
+    @foreach ($category as $categorys)
+    <tr>
+        <td>{{$categorys['cate_id']}}</td>
+        <td>{{$categorys['cate_name']}}</td>
+        <td>{{$categorys['cate_des']}}</td>
+    </tr>
+    @endforeach
+    </table>
+</div>
     </body>
 @endsection

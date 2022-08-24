@@ -1,32 +1,11 @@
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<style>
-    .add-product {
-        padding:30px;
-        height:500px;
-        width: auto;
-    	border-radius: 4%;
-    	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
- 		background: white;
-    }
-    .row h2{
-        text-align: center;
-    }    
-</style>    
+@extends('admin.layout.master')   
+@section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
             <h2>Add New Product</h2>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
-        </div>
     </div>
 </div>
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -98,9 +77,11 @@
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
             <button type="reset" class="btn btn-danger">Reset</button>
+            <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
         </div>
 
     </div>
 </form>    
+@endsection

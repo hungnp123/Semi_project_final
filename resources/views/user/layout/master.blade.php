@@ -146,14 +146,19 @@
     	height: auto;
     	width: 60%;
         padding: 30px;
+        margin-left: 300px;
     	border-radius: 8%;
     	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
- 		background: #6495ED;
+ 		background: #5F9EA0;
     }
     .detailbox img {
         width: 250px;
         height: 370px;
         float: right;
+    }
+    .detailbox h2 h4 {
+        color: white;
+        font-family:Courier;
     }
     .footer{
         width: 100%;

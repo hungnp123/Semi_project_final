@@ -1,6 +1,8 @@
+@extends('admin.layout.master')
+@section('content')
 <style>
     table {
-        width: 60%;
+        width: 100%;
         border-collapse: collapse;
     }
     table, th, td {
@@ -26,9 +28,14 @@
         <td>{{$category['cate_id']}}</td>
         <td>{{$category['cate_name']}}</td>
         <td>{{$category['cate_des']}}</td>
-        <td><a class="btn btn-primary" href="{{ route('category.destroy',$category->cate_id) }}">Delete</a></td>
+        <td>
+            <p><a class="btn btn-Primary" href="{{ route('category.create') }}"> Create </a></p>
+            <p><a class="btn btn-danger" href="{{ route('category.destroy',$category->cate_id) }}"> Delete </a></p>     
+            <p><a class="btn btn-success" href="{{ route('category.edit',$category->cate_id) }}"> Edit </a></p>
+        </td>        
     </tr>
     @endforeach
 
 </table>
 </body>
+@endsection

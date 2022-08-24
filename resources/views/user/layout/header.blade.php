@@ -10,7 +10,7 @@
     </div>    
     </div>
     <div class="center">                                                                                      
-        <a href="homepage.php"><img src="/img/weblogo.jpg" width="250px" height="68px"></a>
+        <a href="{{route('Homepage')}}"><img src="/img/weblogo.jpg" width="250px" height="68px"></a>
     </div>
     <div class="search">
 		<form class="form-inline ml-auto" action="{{ route('product.search') }}" method="get">

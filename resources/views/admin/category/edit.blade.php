@@ -1,5 +1,5 @@
-@extends('admin.layout.header')
-@section('admin.layout.banner')
+@extends('admin.layout.master')
+@section('content')
 <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12">
         
@@ -33,11 +33,12 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                            <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
                         </div>
                     </div>
             </form>
         </div>
     </div>
 </div>
-@section('admin.layout.footer')    
 @endsection

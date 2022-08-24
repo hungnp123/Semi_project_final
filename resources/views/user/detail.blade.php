@@ -10,12 +10,10 @@
                 <img src="{{asset('img/'.$products->product_img)}}">
             </div> 
             <div class="col-md-8">
-                <h4><span>{{$products->product_price}}</span></h4>
-                <h2 class="mb-0">{{$products->product_name}}</h2>
+                <h4 style="color: white; font-family:'Courier"><span>Price: {{$products->product_price}}</span></h4>
+                <h1 style="color: white; font-family:'Courier">Name: {{$products->product_name}}</h2>
                 <hr width="60%">
-                <h4 class="mt-3">{{$products->description}}</h4>
-
-
+                <h4 style="color: white; font-family:'Courier"class="mt-3">Plot: {{$products->description}}</h4>
             </div>
        </div>
     </div>   

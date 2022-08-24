@@ -1,4 +1,6 @@
--<div class="row">
+@extends('admin.layout.master')
+@section('content')
+<div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Edit Product</h2>
@@ -78,3 +80,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
+@endsection

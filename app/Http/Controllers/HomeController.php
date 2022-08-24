@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 
+use App\Models\Category;
+
 class HomeController extends Controller
 {
     public function show_content()
@@ -13,4 +15,10 @@ class HomeController extends Controller
         $data = Product::paginate(8);
         return view('user/homepage',['product' => $data]);
     }
+    public function show_cate()
+    {
+        $data = Category::paginate(5);
+        return view('admin/admin',['category' => $data]);
+    }
+    
 }

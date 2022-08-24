@@ -13,14 +13,14 @@ class Usercontroller extends Controller
     {
         $user = User::all();
 
-        return view('user.users.index',compact('user'));
+        return view('admin.users.index',compact('user'));
     }
 
     
     public function create()
     {
         //
-        return view('user.users.create');
+        return view('admin.users.create');
     }
     public function store(Request $request)
     {   
@@ -29,11 +29,11 @@ class Usercontroller extends Controller
         $user->full_name= $request->input('full_name');
         $user->password= $request->input('password');
         $user->role= $request->input('role');
-        $user->status= $request->input('password');
+       
 
        
         
-        $user->status = $request->input('status') == true ? '1':'0';
+       
         $user->save();
         return redirect()->back()->with('status','added Successfully');
     }
@@ -49,7 +49,7 @@ class Usercontroller extends Controller
     {
         $user = User::find($id);
  
-        return view('user.users.edit',compact('user'));
+        return view('admin.users.edit',compact('user'));
     }
 
    
@@ -60,11 +60,11 @@ class Usercontroller extends Controller
         $user->full_name= $request->input('full_name');
         $user->password= $request->input('password');
         $user->role= $request->input('role');
-        $user->status= $request->input('password');
+       
 
 
         
-        $user->status = $request->input('status') == true ? '1':'0';
+      
         $user->save();
         return redirect()->back()->with('status','user update Successfully');
     }

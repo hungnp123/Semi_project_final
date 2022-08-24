@@ -10,10 +10,11 @@
                 <img src="{{asset('img/'.$products->product_img)}}">
             </div> 
             <div class="col-md-8">
-                <div class="price"><span>{{$products->product_price}}</span></div>
+                <h4><span>{{$products->product_price}}</span></h4>
                 <h2 class="mb-0">{{$products->product_name}}</h2>
                 <hr width="60%">
                 <h4 class="mt-3">{{$products->description}}</h4>
+
 
             </div>
        </div>

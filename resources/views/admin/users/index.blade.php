@@ -1,15 +1,5 @@
-<div class = "header">
-    @include('admin.layout.header')
-    </div>
-    <div class = "banner">
-    @include('admin.layout.banner')    
-    </div>
-    <div class = "menubar">
-    @include('admin.layout.menubar')
-    
-    
-     
-    
+@extends('user.layout.master')
+@section('content')
       <div class="contaimer mt -5">
         <div class="row">
           <div class="col-md-12">
@@ -45,13 +35,7 @@
                             {{ $item->password }}
                           </td>
                           <td>{{ $item->role}}</td>
-                          <td>
-                            @if ($item->status == '1')
-                              hidden
-                            @else
-                              visible
-                            @endif
-                          </td>
+                          
     
                           <td>
                                  <a href="{{ url ('edit-user/'.$item->id) }}" class="btn btn-success btn-sm">Edit</a>
@@ -75,6 +59,5 @@
           </div>
         </div>
       </div>
-    
-    @include('admin.layout.footer')
+@endsection
     </div>

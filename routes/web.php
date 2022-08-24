@@ -77,8 +77,8 @@ Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,
 Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy'); 
 
 Route::group(['prefix' => 'user'], function(){
-    Route::get('login', [LoginController::class, 'getLogin']);
-    Route::post('login', [LoginController::class, 'postLogin']);
+    Route::get('/login', [LoginController::class, 'getLogin']);
+    Route::post('/login', [LoginController::class, 'postLogin']);
     Route::get('/signup', [SignUpController::class, 'getSignUp']);
     Route::post('/postsignup', [SignUpController::class, 'postSignUp']);
 });

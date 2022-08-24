@@ -36,7 +36,7 @@ Route::get('/homepage', function (){
     return view('user/homepage');
 });
 Route::get('/manager', function () {
-    return view('/managerHP');
+    return view('admin/admin');
 });
 // Route::get('/login', function (){
 //     return view('/login');
@@ -64,17 +64,17 @@ Route::post('/product/store',[ProductController::class, 'store']) -> name('produ
 Route::get('/product/search', [SearchController::class, 'BookSearch']) ->name('product.search');
 
 /*Banner*/
-Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('manager.slider.index');
+Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('slider.index');
 
-Route::get('/add-slider', [App\Http\Controllers\SliderController::class,'create'])->name('create');
+Route::get('/add-slider', [App\Http\Controllers\SliderController::class,'create'])->name('slider.create');
 
 Route::post('/store-slider', [App\Http\Controllers\SliderController::class,'store'])->name('store');
 
-Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'edit'])->name('edit');
+Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'edit'])->name('slider.edit');
 
 Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,'update'])->name('update');
 
-Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy'); 
+Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('slider.destroy'); 
 
 Route::group(['prefix' => 'user'], function(){
     Route::get('/login', [LoginController::class, 'getLogin']);
@@ -89,7 +89,7 @@ Route::get('/add-user', [App\Http\Controllers\UserController::class,'create'])->
 
 Route::post('/store-user', [App\Http\Controllers\UserController::class,'store'])->name('store');
 
-Route::get('/edit-user/{id}', [App\Http\Controllers\UserController::class,'edit'])->name('edit');
+Route::get('/users/edit-user/{id}', [App\Http\Controllers\UserController::class,'edit'])->name('edit');
 
 Route::put('/update-user/{id}', [App\Http\Controllers\UserController::class,'update'])->name('update');
 
